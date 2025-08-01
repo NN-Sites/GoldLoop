@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="פחם פעיל להלבנת שיניים – התוצאה שאתה חייב לראות!"/>
+  <meta name="keywords" content="הלבנת שיניים, פחם פעיל, בריאות הפה, חיוך לבן"/>
+  <meta name="author" content="Whity"/>
+  <title>פחם להלבנת שיניים</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== סרגל עליון ===== */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    /* ===== תוכן הדף ===== */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 40px;
+      gap: 40px;
+      flex-wrap: wrap;
+      background: linear-gradient(to top left, #fff, #eef2f3);
+    }
+
+    .product-img {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .product-img img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+    }
+
+    .product-card {
+      flex: 1 1 400px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+      max-width: 600px;
+    }
+
+    .product-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .product-price {
+      font-size: 1.5rem;
+      color: #27ae60;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .product-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .buy-button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1rem;
+      color: white;
+      background-color: #2ecc71;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .buy-button:hover {
+      background-color: #27ae60;
+    }
+
+    /* ===== פוטר דביק ===== */
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .product-card {
+        padding: 25px;
+      }
+
+      header {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Whity</div>
+  </header>
+
+  <main class="container" aria-label="כרטיס מוצר - פחם להלבנת שיניים">
+    <div class="product-img">
+      <img src="https://ae-pic-a1.aliexpress-media.com/kf/S01bba65ffd0340e892a3501c1b5c4a622.jpg_960x960q75.jpg_.avif" alt="פחם פעיל להלבנת שיניים" loading="lazy" />
+    </div>
+    <section class="product-card">
+      <h1 class="product-title">פחם פעיל להלבנת שיניים</h1>
+      <h2 class="product-price">₪79 בלבד</h2>
+      <p class="product-desc">
+        💎 פחם טבעי 100% לניקוי יסודי והלבנה עדינה של השיניים.<br/>
+        ⚡ מסיר כתמים, מפחית ריח רע, ומשאיר תחושת רעננות לאורך זמן.<br/>
+        ✅ מתאים לשימוש יומיומי, ללא חומרים מזיקים.<br/>
+                🔥 מעל 1500+ הזמנות וביקורות חייוביות!<br/>
+      </p>
+      <a href="order-form.html" class="buy-button" aria-label="לתשלום עכשיו">לתשלום עכשיו</a>
+    </section>
+  </main>
+  
+
+  <footer>
+    כל הזכויות שמורות © Whity 2025
+  </footer>
+</body>
+</html>

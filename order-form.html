@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>תשלום עבור המוצר - Whity</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2d2d2d;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .pay-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background-color: #27ae60;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .pay-button:hover {
+      background-color: #219150;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>לתשלום עבור פחם להלבנת שיניים</h2>
+    <form id="orderForm" action="https://formcarry.com/s/V2izefrqJFM" method="POST" novalidate>
+      <label for="name">שם מלא:</label>
+      <input type="text" id="name" name="שם מלא" required />
+
+      <label for="email">אימייל:</label>
+      <input type="email" id="email" name="אימייל" required />
+
+      <label for="phone">טלפון:</label>
+      <input type="tel" id="phone" name="טלפון" required />
+
+      <label for="address">כתובת:</label>
+      <input type="text" id="address" name="כתובת" required />
+
+      <label for="date">תאריך הזמנה:</label>
+      <input type="date" id="date" name="תאריך הזמנה" required />
+
+      <label for="details">פרטים נוספים:</label>
+      <textarea id="details" name="פרטים נוספים" rows="4"></textarea>
+
+      <button type="submit" id="payBtn" class="pay-button">בצע הזמנה - נחזור אליך בהקדם.</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    © כל הזכויות שמורות לחנות Whity
+  </div>
+
+  <script>
+    // אימות פשוט לפני שליחה, הודעה אם שדות חובה לא מלאים
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const date = document.getElementById('date').value.trim();
+      const address = document.getElementById('address').value.trim();
+
+      if (!name || !phone || !email || !date || !address) {
+        alert("אנא מלא את כל השדות החובה לפני השליחה.");
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
