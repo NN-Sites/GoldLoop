@@ -85,6 +85,32 @@
       color: #aaa;
       margin-top: 40px;
     }
+    select#engraving {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  appearance: none; /* הסרת עיצוב דפדפן ברירת מחדל */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+select#engraving:hover,
+select#engraving:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.6);
+  outline: none;
+}
+
   </style>
 </head>
 <body>
@@ -108,12 +134,23 @@
 
       <label for="address">כתובת:</label>
       <input type="text" id="address" name="כתובת" required />
-
-      <label for="date">תאריך הזמנה:</label>
-      <input type="date" id="date" name="תאריך הזמנה" required />
-
+       
       <label for="details">חריטה:</label>
-      <textarea id="details" name="פרטים נוספים" rows="4"></textarea>
+      <textarea id="details" name="פרטים נוספים" rows="1"></textarea>
+      
+      <label for="engraving">מידה</label>
+<select id="engraving" name="חריטה" required>
+  <option value="" disabled selected>מידה</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+</select>
+
 
       <button type="submit" id="payBtn" class="pay-button">בצע הזמנה - נחזור אליך בהקדם.</button>
     </form>
