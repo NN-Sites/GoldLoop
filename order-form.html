@@ -54,6 +54,12 @@
       resize: vertical;
     }
 
+     input[readonly] {
+      background-color: #e9e9e9;
+      cursor: not-allowed;
+      color: #555;
+    }
+
     .pay-button {
       display: block;
       width: 100%;
@@ -84,8 +90,13 @@
 <body>
 
   <div class="form-container">
-    <h2>לתשלום עבור פחם להלבנת שיניים</h2>
+    <h2>כמעט סיימנו!</h2>
+
     <form id="orderForm" action="https://formcarry.com/s/V2izefrqJFM" method="POST" novalidate>
+      
+      <label for="selectedColor">צבע הטבעת שנבחר:</label>
+      <input type="text" id="selectedColor" name="צבע הטבעת" readonly value="זהב" />
+
       <label for="name">שם מלא:</label>
       <input type="text" id="name" name="שם מלא" required />
 
@@ -101,7 +112,7 @@
       <label for="date">תאריך הזמנה:</label>
       <input type="date" id="date" name="תאריך הזמנה" required />
 
-      <label for="details">פרטים נוספים:</label>
+      <label for="details">חריטה:</label>
       <textarea id="details" name="פרטים נוספים" rows="4"></textarea>
 
       <button type="submit" id="payBtn" class="pay-button">בצע הזמנה - נחזור אליך בהקדם.</button>
@@ -113,17 +124,11 @@
   </div>
 
   <script>
-    // אימות פשוט לפני שליחה, הודעה אם שדות חובה לא מלאים
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const date = document.getElementById('date').value.trim();
-      const address = document.getElementById('address').value.trim();
-
-      if (!name || !phone || !email || !date || !address) {
-        alert("אנא מלא את כל השדות החובה לפני השליחה.");
-        e.preventDefault();
+     window.addEventListener('load', () => {
+      const selectedColor = localStorage.getItem('selectedRingColor') || 'זהב';
+      const selectedColorInput = document.getElementById('selectedColor');
+      if (selectedColorInput) {
+        selectedColorInput.value = selectedColor;
       }
     });
   </script>
